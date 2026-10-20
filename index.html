@@ -1153,32 +1153,42 @@
             <!-- Lưới 4 dự án đánh số 01 - 04 -->
             <div class="projects-grid">
                 
-                <!-- Dự án 01 -->
-                <article class="project-item" data-category="khu-do-thi" onclick="openProjectModal('The Beverly Solari & Đại Đô Thị', 'Đại đô thị thông minh - TP. Thủ Đức', 'Từ 3,2 Tỷ / Căn', 'Tâm điểm sống chuẩn nghỉ dưỡng Mỹ giữa lòng đại đô thị với hệ sinh thái tiện ích toàn diện: TTTM Vincom Mega Mall, công viên 36ha, trường học quốc tế và kết nối Vành Đai 3 chiến lược.')">
-                    <div class="project-card-visual">
-                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80" alt="Đại đô thị phức hợp">
-                        <div class="project-magazine-overlay">
-                            <div class="project-top-meta">
-                                <span>TP. THỦ ĐỨC</span>
-                                <span class="project-status-tag">Đang Mở Bán</span>
-                            </div>
-                            <div>
-                                <h3 class="project-cover-heading">GRAND<br>PARK CITY</h3>
-                                <div class="project-price-pill">
-                                    <span>Giá từ: 3,2 Tỷ</span>
-                                    <span class="project-cta-mini">Chi tiết</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-caption-row">
-                        <span class="project-index">01</span>
-                        <div>
-                            <h4 class="project-info-title">Đại Đô Thị Vinhomes</h4>
-                            <p class="project-info-cat">Khu đô thị phức hợp &amp; Biệt thự</p>
-                        </div>
-                    </div>
-                </article>
+               <!-- Dự án 01: Vinhomes Green Paradise Cần Giờ -->
+<article class="project-item" 
+         data-category="khu-do-thi" 
+         onclick="openProjectModal(
+            'Vinhomes Green Paradise Cần Giờ', 
+            'Xã Cần Giờ, TP. Hồ Chí Minh • Quy mô 2.870 ha', 
+            'Nhà phố từ 9 Tỷ • Biệt thự Song lập từ 20 Tỷ • Đơn lập từ 40 Tỷ (Vay 70-80%, CK 11%/năm)', 
+            'Siêu đô thị lấn biển ESG++ xanh - thông minh quy mô 2.870ha (vốn đầu tư 10 tỷ USD) với 4 phân khu: The Haven Bay, The Green Bay, The Paradise và The Grand Island. Sở hữu Tháp biểu tượng 108 tầng, Nhà hát Sóng Xanh Blue Waves, Cảng du thuyền 5 sao Landmark Harbour, 2 sân Golf 18 lỗ quốc tế và tổ hợp giải trí 122ha.',
+            'https://vinhomecangio.vn/'
+         )">
+    <div class="project-card-visual">
+        <!-- Ảnh phối cảnh đô thị biển (Bạn có thể đổi link ảnh từ vinhomecangio.vn vào thuộc tính src này) -->
+        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80" alt="Vinhomes Green Paradise Cần Giờ">
+        
+        <div class="project-magazine-overlay">
+            <div class="project-top-meta">
+                <span>CẦN GIỜ • 2.870 HA</span>
+                <span class="project-status-tag">Siêu Đô Thị ESG++</span>
+            </div>
+            <div>
+                <h3 class="project-cover-heading">VINHOMES<br>GREEN PARADISE</h3>
+                <div class="project-price-pill">
+                    <span>Giá từ: 9 Tỷ / Căn</span>
+                    <span class="project-cta-mini">Xem dự án</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="project-caption-row">
+        <span class="project-index">01</span>
+        <div>
+            <h4 class="project-info-title">Vinhomes Cần Giờ</h4>
+            <p class="project-info-cat">Siêu đô thị biển 2.870ha • Vingroup</p>
+        </div>
+    </div>
+</article>
 
                 <!-- Dự án 02 -->
                 <article class="project-item" data-category="can-ho" onclick="openProjectModal('Elysian Lò Lu', 'Khu Đông TP.HCM - Mặt tiền Lò Lu', 'Từ 55 Triệu / m²', 'Khu căn hộ sinh thái lấy cảm hứng thiết kế Biophilic xanh mát, liền kề Khu Công Nghệ Cao TP. Thủ Đức, sở hữu tiềm năng khai thác cho thuê chuyên gia và thanh khoản cực tốt.')">
@@ -1494,7 +1504,7 @@
 
     <!-- JAVASCRIPT TƯƠNG TÁC -->
     <script>
-        // 1. Điều khiển Video Giới thiệu bản thân (Phát/Tạm dừng & Âm thanh)
+        // 1. Giới thiệu bản thân (Phát/Tạm dừng & Âm thanh)
         const video = document.getElementById('introVideo');
         const playPauseBtn = document.getElementById('playPauseBtn');
         const playPauseIcon = document.getElementById('playPauseIcon');
