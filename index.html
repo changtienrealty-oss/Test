@@ -1550,19 +1550,30 @@
             });
         });
 
-        // 3. Modal xem nhanh thông tin dự án
-        const modal = document.getElementById('projectModal');
-        function openProjectModal(title, location, price, desc) {
-            document.getElementById('modalTitle').textContent = title;
-            document.getElementById('modalLocation').textContent = location;
-            document.getElementById('modalPrice').textContent = 'Mức giá / Chính sách: ' + price;
-            document.getElementById('modalDesc').textContent = desc;
-            modal.classList.add('open');
-        }
-
-        function closeProjectModal() {
-            modal.classList.remove('open');
-        }
+        // 3. Modal xem nhanh thông tin dự án (Có hỗ trợ gắn link website riêng cho từng dự án)
+const modal = document.getElementById('projectModal');
+function openProjectModal(title, location, price, desc, externalUrl) {
+    document.getElementById('modalTitle').textContent = title;
+    document.getElementById('modalLocation').textContent = location;
+    document.getElementById('modalPrice').textContent = 'Mức giá / Chính sách: ' + price;
+    document.getElementById('modalDesc').textContent = desc;
+    
+    // Cập nhật nút bấm trong Popup: Nếu có link trang web dự án thì mở trang đó, nếu không thì cuộn xuống phần Liên hệ
+    const modalBtn = modal.querySelector('a');
+    if (externalUrl) {
+        modalBtn.href = externalUrl;
+        modalBtn.target = '_blank';
+        modalBtn.textContent = 'XEM TRANG CHI TIẾT DỰ ÁN ↗';
+        modalBtn.onclick = null;
+    } else {
+        modalBtn.href = '#lien-he';
+        modalBtn.removeAttribute('target');
+        modalBtn.textContent = 'NHẬN BẢNG GIÁ & MẶT BẰNG CHI TIẾT';
+        modalBtn.onclick = closeProjectModal;
+    }
+    
+    modal.classList.add('open');
+}
 
         modal.addEventListener('click', (e) => {
             if (e.target === modal) closeProjectModal();
